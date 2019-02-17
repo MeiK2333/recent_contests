@@ -3,12 +3,12 @@ Recent Contests from frequently used OJs
 
 ## OJs
 
-- [topcoder](https://www.topcoder.com/)
-- [UVa](https://uva.onlinejudge.org/)
+- [topcoder](https://www.topcoder.com/)（数据不足）
+- [UVa](https://uva.onlinejudge.org/) （无数据，暂时无法开发）
 - [Codeforces](https://codeforces.com/) √
-- [LeetCode](https://leetcode.com/)
-- [CodeChef](https://www.codechef.com/)
-- [HackerRank](https://www.hackerrank.com/)
+- [LeetCode](https://leetcode.com/) （无数据，暂时无法开发）
+- [CodeChef](https://www.codechef.com/) √
+- [HackerRank](https://www.hackerrank.com/)（数据不足）
 - [Kattis](https://open.kattis.com/)
 - [SPOJ](https://www.spoj.com/)
 - [AtCoder](https://atcoder.jp/)

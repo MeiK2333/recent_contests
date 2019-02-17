@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -19,10 +19,21 @@ def main():
         tds = tr.find_all('td')
         name = tds[0].string.strip()
 
-        raw_time = tds[2].find('span').string.strip()
-        time = datetime.strptime(raw_time, '%b/%d/%Y %H:%M')
-        str_time = time.strftime('%Y-%m-%d %H:%M:%S')
+        raw_start_time = tds[2].find('span').string.strip()
+        start_time = datetime.strptime(raw_start_time, '%b/%d/%Y %H:%M')
+        str_start_time = start_time.strftime('%Y-%m-%d %H:%M:%S')
         length = tds[3].string.strip()
+        if length.count(':') == 1:
+            hours, minutes = length.split(':')
+            length_time = timedelta(hours=int(hours), minutes=int(minutes))
+        elif length.count(':') == 2:
+            days, hours, minutes = length.split(':')
+            length_time = timedelta(
+                days=int(days), hours=int(hours), minutes=int(minutes))
+        else:
+            length_time = timedelta()
+        end_time = start_time + length_time
+        str_end_time = end_time.strftime('%Y-%m-%d %H:%M:%S')
         register_a = tds[5].find_all('a')
         if register_a:
             register_link = 'https://codeforces.com' + register_a[0]['href']
@@ -31,7 +42,8 @@ def main():
         data.append({
             'id': contest_id,
             'name': name,
-            'start_time': str_time,
+            'start_time': str_start_time,
+            'end_time': str_end_time,
             'length': length,
             'link': register_link
         })

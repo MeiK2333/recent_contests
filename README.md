@@ -9,7 +9,7 @@ Recent Contests from frequently used OJs
 - [LeetCode](https://leetcode.com/) （无数据，暂时无法开发）
 - [CodeChef](https://www.codechef.com/) √
 - [HackerRank](https://www.hackerrank.com/)（数据不足）
-- [Kattis](https://open.kattis.com/)
+- [Kattis](https://open.kattis.com/) √
 - [SPOJ](https://www.spoj.com/)
 - [AtCoder](https://atcoder.jp/)
 - [CS Academy](https://csacademy.com/)

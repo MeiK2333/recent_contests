@@ -31,6 +31,17 @@ Recent Contests from frequently used OJs
 /contests.json?exclude=CodeChef&exclude=CS%20Academy
 ```
 
+### OJ 对应的参数
+
+- Codeforces: `Codeforces`
+- CodeChef: `CodeChef`
+- Kattis: `Kattis`
+- AtCoder: `AtCoder`
+- 计蒜客: `jisuanke`
+- 牛客网: `nowcoder`
+- LOJ: `LOJ`
+- CS Academy: `CS Academy`
+
 `include` 与 `exclude` 可以同时使用，但不保证效果。
 
 ## 已经支持的 OJ

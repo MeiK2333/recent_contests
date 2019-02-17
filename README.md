@@ -2,6 +2,17 @@
 
 Recent Contests from frequently used OJs
 
+## Contests.json
+
+返回**还未结束**的比赛列表，其中**至少**包含：
+
+- `name`: 比赛名
+- `link`: 跳转到比赛的链接
+- `start_time`: 比赛开始时间（UTC+0）
+- `end_time`: 比赛结束时间（UTC+0）
+
+注意：比赛的开始时间与结束时间均为 **UTC+0**。
+
 ## 已经支持的 OJ
 
 - [Codeforces](https://codeforces.com/)
@@ -16,7 +27,6 @@ Recent Contests from frequently used OJs
 ## 还未支持的 OJ
 
 因为暂时无数据等原因，有些 OJ 暂时没能添加：
-
 
 - [hihoCoder](https://hihocoder.com/)
 - [51nod](https://www.51nod.com/)

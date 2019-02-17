@@ -8,6 +8,7 @@ Recent Contests from frequently used OJs
 - [CodeChef](https://www.codechef.com/)
 - [Kattis](https://open.kattis.com/)
 - [AtCoder](https://atcoder.jp/)
+- [计蒜客](https://www.jisuanke.com/)
 
 ## 还未支持的 OJ
 
@@ -39,6 +40,10 @@ Recent Contests from frequently used OJs
 
 没有数据，且校内赛居多。
 
+### [51nod](https://www.51nod.com/)
+
+较久无新动态。
+
 ### [topcoder](https://www.topcoder.com/)
 
 近期没有比赛数据，因此无法获得格式。
@@ -62,7 +67,6 @@ Recent Contests from frequently used OJs
 - [hihoCoder](https://hihocoder.com/)
 - [51nod](https://www.51nod.com/)
 - [牛客网](https://www.nowcoder.com/)
-- [计蒜客](https://www.jisuanke.com/)
 - [e-olymp](https://www.e-olymp.com/)
 - [BZOJ](https://www.lydsy.com/JudgeOnline/)
 - [洛谷](https://www.luogu.org/)

@@ -3,8 +3,11 @@ from datetime import datetime
 
 import pymongo
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app, supports_credentials=True)
 
 mongo_uri = os.environ.get('mongo_uri', 'mongodb://localhost')
 

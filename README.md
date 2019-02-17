@@ -10,12 +10,12 @@ Recent Contests from frequently used OJs
 - [CodeChef](https://www.codechef.com/) √
 - [HackerRank](https://www.hackerrank.com/)（数据不足）
 - [Kattis](https://open.kattis.com/) √
-- [SPOJ](https://www.spoj.com/)
-- [AtCoder](https://atcoder.jp/)
+- [SPOJ](https://www.spoj.com/)（数据不足）
+- [AtCoder](https://atcoder.jp/) √
 - [CS Academy](https://csacademy.com/)
 - [Timus OJ (URAL)](http://acm.timus.ru/)
 - [HDOJ](http://acm.hdu.edu.cn/)
-- [POJ](http://poj.org/)
+- [POJ](http://poj.org/)（数据不足）
 - [ZOJ](http://acm.zju.edu.cn/onlinejudge/)
 - [FZU OJ](http://acm.fzu.edu.cn/)
 - [SDUT OJ](https://acm.sdut.edu.cn/onlinejudge2/)

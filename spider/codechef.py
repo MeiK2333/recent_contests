@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -17,6 +17,8 @@ def main():
     future_table = tables[2]
     trs.extend(future_table.find('tbody').find_all('tr'))
 
+    convert_time = timedelta(hours=5, minutes=30)
+
     for tr in trs:
         tds = tr.find_all('td')
         code = tds[0].string.strip()
@@ -26,7 +28,10 @@ def main():
         raw_end_time = tds[3]['data-endtime'].strip()
         start_time = datetime.strptime(
             raw_start_time, '%Y-%m-%dT%H:%M:%S+05:30')
+        # 转换时区到 UTC
+        start_time -= convert_time
         end_time = datetime.strptime(raw_end_time, '%Y-%m-%dT%H:%M:%S+05:30')
+        end_time -= convert_time
         str_start_time = start_time.strftime('%Y-%m-%d %H:%M:%S')
         str_end_time = end_time.strftime('%Y-%m-%d %H:%M:%S')
 

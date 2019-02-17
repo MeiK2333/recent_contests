@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 
 import pymongo
@@ -21,3 +22,5 @@ def update_to_db(source, data):
     }
     mongo_collection.update_one(
         {'source': source}, {'$set': item}, upsert=True)
+    print('{file} updated at {time}'.format(
+        file=os.path.basename(sys.argv[0]), time=time))

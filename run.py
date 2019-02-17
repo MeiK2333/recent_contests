@@ -41,6 +41,9 @@ def contests():
                 item['source'] = oj['source']
                 # 只返回未结束的比赛
                 if item['end_time'] >= now:
+                    # 解析成 ISO 8801 标准的格式，以便 JS 等其他语言处理
+                    item['start_time'] = datetime.strptime(item['start_time'], '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%SZ')
+                    item['end_time'] = datetime.strptime(item['end_time'], '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%dT%H:%M:%SZ')
                     data.append(item)
 
     data = sorted(data, key=lambda item: item['start_time'])

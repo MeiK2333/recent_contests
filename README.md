@@ -9,6 +9,7 @@ Recent Contests from frequently used OJs
 - [Kattis](https://open.kattis.com/)
 - [AtCoder](https://atcoder.jp/)
 - [计蒜客](https://www.jisuanke.com/)
+- [牛客网](https://www.nowcoder.com/)
 
 ## 还未支持的 OJ
 
@@ -66,7 +67,6 @@ Recent Contests from frequently used OJs
 - [SDUT OJ](https://acm.sdut.edu.cn/onlinejudge2/)
 - [hihoCoder](https://hihocoder.com/)
 - [51nod](https://www.51nod.com/)
-- [牛客网](https://www.nowcoder.com/)
 - [e-olymp](https://www.e-olymp.com/)
 - [BZOJ](https://www.lydsy.com/JudgeOnline/)
 - [洛谷](https://www.luogu.org/)

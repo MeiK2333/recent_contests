@@ -13,6 +13,26 @@ Recent Contests from frequently used OJs
 
 注意：比赛的开始时间与结束时间均为 **UTC+0**。
 
+### 参数
+
+**include**
+
+指定包含某 OJ，不提供此参数时返回所有可用数据
+
+```
+/contests.json?include=Codeforces&include=LOJ
+```
+
+**exclude**
+
+指定不包含某 OJ
+
+```
+/contests.json?exclude=CodeChef&exclude=CS%20Academy
+```
+
+`include` 与 `exclude` 可以同时使用，但不保证效果。
+
 ## 已经支持的 OJ
 
 - [Codeforces](https://codeforces.com/)

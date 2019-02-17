@@ -43,7 +43,7 @@ def main():
             'end_time': str_end_time,
         })
 
-        update_to_db('CodeChef', data)
+    update_to_db('CodeChef', data)
 
 
 if __name__ == '__main__':

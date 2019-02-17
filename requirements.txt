@@ -1,4 +1,5 @@
-requests
-pymongo
+bs4
 flask
 flask-cors
+pymongo
+requests

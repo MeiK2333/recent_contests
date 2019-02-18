@@ -2,6 +2,8 @@
 
 Recent Contests from frequently used OJs
 
+WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请注明数据来源。
+
 ## Contests.json
 
 返回**还未结束**的比赛列表，其中**至少**包含：
@@ -31,6 +33,8 @@ Recent Contests from frequently used OJs
 /contests.json?exclude=CodeChef&exclude=CS%20Academy
 ```
 
+`include` 与 `exclude` 可以同时使用，但不保证效果。
+
 ### OJ 对应的参数
 
 - Codeforces: `Codeforces`
@@ -42,7 +46,6 @@ Recent Contests from frequently used OJs
 - LOJ: `LOJ`
 - CS Academy: `CS Academy`
 
-`include` 与 `exclude` 可以同时使用，但不保证效果。
 
 ## 已经支持的 OJ
 
@@ -61,6 +64,9 @@ Recent Contests from frequently used OJs
 
 - [hihoCoder](https://hihocoder.com/)
 - [51nod](https://www.51nod.com/)
-- [e-olymp](https://www.e-olymp.com/)
 - [UOJ](http://uoj.ac/)
 - [洛谷](https://www.luogu.org)
+
+## 支持新的 OJ / 新功能建议 / Bug 反馈
+
+请创建一个 [Issues](https://github.com/MeiK-h/recent_contests/issues) 来反馈您的意见。

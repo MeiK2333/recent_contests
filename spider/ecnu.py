@@ -42,7 +42,7 @@ def main():
             'authors': authors
         })
 
-    update_to_db('ecnu', data)
+    update_to_db('EOJ', data)
 
 
 if __name__ == '__main__':

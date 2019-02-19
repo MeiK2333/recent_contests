@@ -45,7 +45,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - 牛客网: `nowcoder`
 - LOJ: `LOJ`
 - CS Academy: `CS Academy`
-- 华东师范大学在线评测系统: `ecnu`
+- 华东师范大学在线评测系统: `EOJ`
 
 
 ## 已经支持的 OJ

@@ -46,7 +46,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - LOJ: `LOJ`
 - CS Academy: `CS Academy`
 - 华东师范大学在线评测系统: `EOJ`
-
+- hihoCoder: `hihoCoder`
 
 ## 已经支持的 OJ
 
@@ -59,12 +59,12 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [LOJ](https://loj.ac/)
 - [CS Academy](https://csacademy.com/)
 - [华东师范大学在线评测系统](https://acm.ecnu.edu.cn/)
+- [hihoCoder](https://hihocoder.com/)
 
 ## 还未支持的 OJ
 
-因为暂时无数据等原因，有些 OJ 暂时没能添加：
+因为无数据等原因，有些 OJ 暂时没能添加：
 
-- [hihoCoder](https://hihocoder.com/)
 - [51nod](https://www.51nod.com/)
 - [UOJ](http://uoj.ac/)
 - [洛谷](https://www.luogu.org)

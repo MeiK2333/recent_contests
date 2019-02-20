@@ -68,6 +68,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [51nod](https://www.51nod.com/)
 - [UOJ](http://uoj.ac/)
 - [洛谷](https://www.luogu.org)
+- [HackerRank](https://www.hackerrank.com)
 
 ## 支持新的 OJ / 新功能建议 / Bug 反馈
 

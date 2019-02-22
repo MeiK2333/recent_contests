@@ -33,8 +33,8 @@ def index():
 
 @app.route('/contests.json')
 def contests():
-    include = request.args.getlist('include')
-    exclude = request.args.getlist('exclude')
+    include = request.args.getlist('include') + request.args.getlist('include[]')
+    exclude = request.args.getlist('exclude') + request.args.getlist('exclude[]')
 
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 

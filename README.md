@@ -24,6 +24,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 
 ```
 /contests.json?include=Codeforces&include=LOJ
+/contests.json?include[]=Codeforces&include[]=LOJ
 ```
 
 **exclude**
@@ -32,6 +33,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 
 ```
 /contests.json?exclude=CodeChef&exclude=CS%20Academy
+/contests.json?exclude[]=CodeChef&exclude[]=CS%20Academy
 ```
 
 `include` 与 `exclude` 可以同时使用，但不保证效果。

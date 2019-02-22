@@ -23,7 +23,7 @@ def index():
     data = {
         'GitHub': 'https://github.com/MeiK-h/recent_contests',
         'message': 'The web api allows cross-domain access, you can reference this data directly, but please indicate the data source',
-        'contests_link': f'{request.host_url}contests.json',
+        'contests_link': f'http://contests.sdutacm.cn/contests.json',
         'updated_at': [{
             'source': oj['source'],
             'updated_at': oj['updated_at']

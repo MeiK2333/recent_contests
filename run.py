@@ -23,6 +23,7 @@ def index():
     data = {
         'GitHub': 'https://github.com/MeiK-h/recent_contests',
         'message': 'The web api allows cross-domain access, you can reference this data directly, but please indicate the data source',
+        'contests_link': f'{request.url_root}contests.json',
         'updated_at': [{
             'source': oj['source'],
             'updated_at': oj['updated_at']
@@ -33,8 +34,10 @@ def index():
 
 @app.route('/contests.json')
 def contests():
-    include = request.args.getlist('include') + request.args.getlist('include[]')
-    exclude = request.args.getlist('exclude') + request.args.getlist('exclude[]')
+    include = request.args.getlist('include') + \
+        request.args.getlist('include[]')
+    exclude = request.args.getlist('exclude') + \
+        request.args.getlist('exclude[]')
 
     now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 

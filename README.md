@@ -50,6 +50,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - CS Academy: `CS Academy`
 - 华东师范大学在线评测系统: `EOJ`
 - hihoCoder: `hihoCoder`
+- LeetCode: `LeetCode`
 
 ## 已经支持的 OJ
 
@@ -63,6 +64,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [CS Academy](https://csacademy.com/)
 - [华东师范大学在线评测系统](https://acm.ecnu.edu.cn/)
 - [hihoCoder](https://hihocoder.com/)
+- [LeetCode](https://leetcode.com/)
 
 ## 还未支持的 OJ
 

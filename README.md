@@ -51,6 +51,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - 华东师范大学在线评测系统: `EOJ`
 - hihoCoder: `hihoCoder`
 - LeetCode: `LeetCode`
+- 洛谷: `luogu`
 
 ## 已经支持的 OJ
 
@@ -65,6 +66,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [华东师范大学在线评测系统](https://acm.ecnu.edu.cn/)
 - [hihoCoder](https://hihocoder.com/)
 - [LeetCode](https://leetcode.com/)
+- [洛谷](https://www.luogu.org/)
 
 ## 还未支持的 OJ
 

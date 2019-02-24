@@ -1,5 +1,6 @@
-import requests
 from datetime import datetime, timedelta
+
+import requests
 
 from db import update_to_db
 

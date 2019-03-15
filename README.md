@@ -52,6 +52,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - hihoCoder: `hihoCoder`
 - LeetCode: `LeetCode`
 - 洛谷: `luogu`
+- 51nod: `51nod`
 
 ## 已经支持的 OJ
 
@@ -67,12 +68,12 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [hihoCoder](https://hihocoder.com/)
 - [LeetCode](https://leetcode.com/)
 - [洛谷](https://www.luogu.org/)
+- [51nod](https://www.51nod.com/)
 
 ## 还未支持的 OJ
 
 因为无数据等原因，有些 OJ 暂时没能添加：
 
-- [51nod](https://www.51nod.com/)
 - [UOJ](http://uoj.ac/)
 - [HackerRank](https://www.hackerrank.com)
 

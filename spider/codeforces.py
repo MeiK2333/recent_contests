@@ -13,6 +13,7 @@ def main():
     trs = tables[0].find_all('tr')
 
     data = []
+    convert_time = timedelta(hours=3)  # 转换莫斯科与标准时间
 
     for tr in trs[1:]:
         contest_id = tr['data-contestid']
@@ -21,6 +22,7 @@ def main():
 
         raw_start_time = tds[2].find('span').string.strip()
         start_time = datetime.strptime(raw_start_time, '%b/%d/%Y %H:%M')
+        start_time -= convert_time
         str_start_time = start_time.strftime('%Y-%m-%d %H:%M:%S')
         length = tds[3].string.strip()
         if length.count(':') == 1:

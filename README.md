@@ -1,6 +1,6 @@
 # recent_contests
 
-Recent Contests from frequently used OJs
+Recent Contests from frequently used OJs.
 
 WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请注明数据来源。
 
@@ -8,6 +8,7 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 
 返回**还未结束**的比赛列表，其中**至少**包含：
 
+- `source`: 比赛平台
 - `name`: 比赛名
 - `link`: 跳转到比赛的链接
 - `start_time`: 比赛开始时间（UTC+0）

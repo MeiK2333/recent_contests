@@ -6,7 +6,7 @@ from db import update_to_db
 
 
 def main():
-    url = 'https://www.51nod.com/Contest/ContestList?type=2'
+    url = 'https://www.51nod.com/Contest/ContestList'
     resp = requests.get(url)
 
     data = []

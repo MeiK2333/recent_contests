@@ -18,7 +18,7 @@ def main():
     for tr in trs[1:]:
         contest_id = tr['data-contestid']
         tds = tr.find_all('td')
-        name = tds[0].string.strip()
+        name = tds[0].text.split('\n')[1].strip()
 
         raw_start_time = tds[2].find('span').string.strip()
         start_time = datetime.strptime(raw_start_time, '%b/%d/%Y %H:%M')

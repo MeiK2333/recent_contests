@@ -1,0 +1,14 @@
+# Contests Spider
+00 *    * * *   python /work/spider/atcoder.py    >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/codechef.py   >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/codeforces.py >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/csacademy.py  >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/jisuanke.py   >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/kattis.py     >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/loj.py        >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/nowcoder.py   >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/ecnu.py       >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/hihocoder.py  >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/leetcode.py   >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/luogu.py      >> /work/spider.log 2>&1
+00 *    * * *   python /work/spider/51nod.py      >> /work/spider.log 2>&1

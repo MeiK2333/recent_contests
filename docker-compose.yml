@@ -1,0 +1,22 @@
+version: "2.0"
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+  recent_contests:
+    build: .
+    ports:
+      - "8001:5000"
+    environment:
+      mongo_uri: "mongodb://root:password@mongo"
+    command: gunicorn -b 0.0.0.0:5000 -w 4 run:app
+
+  spider:
+    build: .
+    environment:
+      mongo_uri: "mongodb://root:password@mongo"
+    command: crond -f -d 8

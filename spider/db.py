@@ -6,7 +6,7 @@ import pymongo
 
 mongo_uri = os.environ.get('mongo_uri', 'mongodb://localhost')
 
-mongo_client = pymongo.MongoClient()
+mongo_client = pymongo.MongoClient(mongo_uri)
 
 mongo_db = mongo_client.Contest
 

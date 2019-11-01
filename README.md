@@ -80,4 +80,4 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 
 ## 支持新的 OJ / 新功能建议 / Bug 反馈
 
-请创建一个 [Issues](https://github.com/MeiK-h/recent_contests/issues) 来反馈您的意见。
+请创建一个 [Issues](https://github.com/MeiK2333/recent_contests/issues) 来反馈您的意见。

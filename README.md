@@ -4,6 +4,16 @@ Recent Contests from frequently used OJs.
 
 WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请注明数据来源。
 
+## 本地部署
+
+```bash
+$ docker-compose up -d
+```
+
+服务将在 `8001` 端口以 WEB 的方式启动。如果想要使用自定义的端口，请修改 `docker-compose.yml` 中的相关设置。
+
+爬虫将每小时运行一次，如果想要主动执行，可以 `exec` 至 `spider` 中执行 `python spider.sh`。
+
 ## Contests.json
 
 返回**还未结束**的比赛列表，其中**至少**包含：
@@ -39,22 +49,6 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 
 `include` 与 `exclude` 可以同时使用，但不保证效果。
 
-### OJ 对应的参数
-
-- Codeforces: `Codeforces`
-- CodeChef: `CodeChef`
-- Kattis: `Kattis`
-- AtCoder: `AtCoder`
-- 计蒜客: `jisuanke`
-- 牛客网: `nowcoder`
-- LOJ: `LOJ`
-- CS Academy: `CS Academy`
-- 华东师范大学在线评测系统: `EOJ`
-- hihoCoder: `hihoCoder`
-- LeetCode: `LeetCode`
-- 洛谷: `luogu`
-- 51nod: `51nod`
-
 ## 已经支持的 OJ
 
 - [Codeforces](https://codeforces.com/)
@@ -65,7 +59,6 @@ WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请
 - [牛客网](https://www.nowcoder.com/)
 - [LOJ](https://loj.ac/)
 - [CS Academy](https://csacademy.com/)
-- [华东师范大学在线评测系统](https://acm.ecnu.edu.cn/)
 - [hihoCoder](https://hihocoder.com/)
 - [LeetCode](https://leetcode.com/)
 - [洛谷](https://www.luogu.org/)

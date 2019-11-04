@@ -45,7 +45,7 @@ def main():
             'register_end_time': str_register_end_time,
         })
 
-    update_to_db('nowcoder', data)
+    update_to_db('牛客', data)
 
 
 if __name__ == "__main__":

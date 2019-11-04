@@ -43,7 +43,7 @@ def main():
             'link': link
         })
 
-    update_to_db('jisuanke', data)
+    update_to_db('计蒜客', data)
 
 
 if __name__ == '__main__':

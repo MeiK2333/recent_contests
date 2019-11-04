@@ -33,7 +33,7 @@ def main():
             'problem_count': contest['problemCount']
         })
 
-    update_to_db('luogu', data)
+    update_to_db('洛谷', data)
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-cd .
+cd /work
 python spider/atcoder.py    >> spider.log 2>&1 &
 python spider/codechef.py   >> spider.log 2>&1 &
 python spider/codeforces.py >> spider.log 2>&1 &

@@ -8,3 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com
 COPY . .
 
 COPY crontab /etc/crontabs/root
+
+RUN apk add dumb-init
+
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]

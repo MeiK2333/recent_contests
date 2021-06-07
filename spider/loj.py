@@ -7,7 +7,7 @@ from db import update_to_db
 
 
 def main():
-    resp = requests.get('https://loj.ac/contests')
+    resp = requests.get('https://contest-archive.loj.ac/contests/')
     soup = BeautifulSoup(resp.text, 'html.parser')
     table = soup.find('table')
 
@@ -37,7 +37,6 @@ def main():
             'end_time': str_end_time,
             'description': description,
         })
-
     update_to_db('LOJ', data)
 
 

@@ -4,6 +4,11 @@ Recent Contests from frequently used OJs.
 
 WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请注明数据来源。
 
+## TODO
+
+- 使用 ISO 格式存储时间
+- 记录历史数据
+
 ## 本地部署
 
 ```bash

@@ -4,11 +4,6 @@ Recent Contests from frequently used OJs.
 
 WEB API 配置了允许跨域访问，您可以直接引用本数据源，但请注明数据来源。
 
-## TODO
-
-- 使用 ISO 格式存储时间
-- 记录历史数据
-
 ## 本地部署
 
 ```bash
@@ -17,7 +12,7 @@ $ docker-compose up -d
 
 服务将在 `8001` 端口以 WEB 的方式启动。如果想要使用自定义的端口，请修改 `docker-compose.yml` 中的相关设置。
 
-爬虫将每小时运行一次，如果想要主动执行，可以 `exec` 至 `spider` 中执行 `python spider.sh`。
+爬虫将每小时运行一次，如果想要主动执行，可以 `exec` 至 `spider` 中执行 `spider.sh`。
 
 ## Contests.json
 

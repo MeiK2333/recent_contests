@@ -1,5 +1,4 @@
-from datetime import datetime
-from datetime import timedelta, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -9,7 +8,7 @@ from spider.utils import update_platform
 
 def main():
     resp = requests.post(
-        "https://leetcode.com/graphql",
+        "https://leetcode-cn.com/graphql",
         json={
             "operationName": None,
             "variables": {},
@@ -28,7 +27,7 @@ def main():
             continue
         start_time = datetime.utcfromtimestamp(contest["startTime"]).replace(tzinfo=timezone.utc)
         name = contest["title"]
-        link = "https://leetcode.com/contest/" + contest["titleSlug"]
+        link = "https://leetcode-cn.com/contest/" + contest["titleSlug"]
         length_time = timedelta(seconds=contest["duration"])
         end_time = start_time + length_time
         data.append(
@@ -41,7 +40,7 @@ def main():
             )
         )
 
-    update_platform("LeetCode", data)
+    update_platform("力扣", data)
 
 
 if __name__ == "__main__":

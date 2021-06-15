@@ -1,39 +1,38 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import requests
 
-from db import update_to_db
+from schemas import Contest
+from spider.utils import update_platform
 
 
 def main():
     resp = requests.get(
         "https://www.codechef.com/api/list/contests/all?sort_by=END&sorting_order=desc&offset=0"
     )
-    present_contests = resp.json()["present_contests"]
+    present_contests = resp.json()["present_contests"] + resp.json()["future_contests"]
     data = []
 
-    convert_time = timedelta(hours=5, minutes=30)
+    tz = timezone(timedelta(hours=5, minutes=30))
 
     for item in present_contests:
         start_time = datetime.strptime(
             item["contest_start_date_iso"], "%Y-%m-%dT%H:%M:%S+05:30"
-        )
-        start_time -= convert_time
+        ).replace(tzinfo=tz)
         end_time = datetime.strptime(
             item["contest_end_date_iso"], "%Y-%m-%dT%H:%M:%S+05:30"
-        )
-        end_time -= convert_time
+        ).replace(tzinfo=tz)
         code = item["contest_code"]
         data.append(
-            {
-                "id": code,
-                "link": f"https://www.codechef.com/{code}",
-                "name": item["contest_name"],
-                "start_time": start_time.strftime("%Y-%m-%d %H:%M:%S"),
-                "end_time": end_time.strftime("%Y-%m-%d %H:%M:%S"),
-            }
+            Contest(
+                contest_id=code,
+                link=f"https://www.codechef.com/{code}",
+                name=item["contest_name"],
+                start_time=start_time,
+                end_time=end_time,
+            )
         )
-    update_to_db("CodeChef", data)
+    update_platform("CodeChef", data)
 
 
 if __name__ == "__main__":

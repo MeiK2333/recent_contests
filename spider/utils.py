@@ -29,7 +29,7 @@ def update_platform(platform_name: str, contests: List[schemas.Contest]):
         contest.platform = platform
         contest.contest_id = item.contest_id
         contest.link = item.link
-        contest.name = item.link
+        contest.name = item.name
         contest.start_time = item.start_time
         contest.end_time = item.end_time
         db.add(contest)

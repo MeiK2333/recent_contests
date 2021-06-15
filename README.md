@@ -24,6 +24,7 @@ $ docker-compose up -d
 - `start_time`: 比赛开始时间（UTC+0）
 - `end_time`: 比赛结束时间（UTC+0）
 - `hash`: `source + name + link + start_time + end_time` 的 MD5 哈希值
+- `contest_id`: 该比赛在该平台中的唯一标识
 
 注意：比赛的开始时间与结束时间均为 **UTC+0**。
 
@@ -34,8 +35,8 @@ $ docker-compose up -d
 指定包含某 OJ，不提供此参数时返回所有可用数据
 
 ```
-/contests.json?include=Codeforces&include=LOJ
-/contests.json?include[]=Codeforces&include[]=LOJ
+/contests.json?include=Codeforces&include=LibreOJ
+/contests.json?include[]=Codeforces&include[]=LibreOJ
 ```
 
 **exclude**
@@ -43,8 +44,8 @@ $ docker-compose up -d
 指定不包含某 OJ
 
 ```
-/contests.json?exclude=CodeChef&exclude=CS%20Academy
-/contests.json?exclude[]=CodeChef&exclude[]=CS%20Academy
+/contests.json?exclude=CodeChef&exclude=CSAcademy
+/contests.json?exclude[]=CodeChef&exclude[]=CSAcademy
 ```
 
 `include` 与 `exclude` 可以同时使用，但不保证效果。
@@ -53,12 +54,11 @@ $ docker-compose up -d
 
 - [Codeforces](https://codeforces.com/)
 - [CodeChef](https://www.codechef.com/)
-- [Kattis](https://open.kattis.com/)
 - [AtCoder](https://atcoder.jp/)
 - [计蒜客](https://www.jisuanke.com/)
 - [牛客网](https://www.nowcoder.com/)
-- [LOJ](https://loj.ac/)
-- [CS Academy](https://csacademy.com/)
+- [LibreOJ](https://loj.ac/)
+- [CSAcademy](https://csacademy.com/)
 - [hihoCoder](https://hihocoder.com/)
 - [LeetCode](https://leetcode.com/)
 - [洛谷](https://www.luogu.org/)
@@ -69,6 +69,7 @@ $ docker-compose up -d
 因为无数据等原因，有些 OJ 暂时没能添加：
 
 - [UOJ](http://uoj.ac/)
+- [Kattis](https://open.kattis.com/)
 - [HackerRank](https://www.hackerrank.com)
 
 ## 支持新的 OJ / 新功能建议 / Bug 反馈

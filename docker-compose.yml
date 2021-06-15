@@ -1,23 +1,32 @@
 version: "3.8"
 services:
+  postgres:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: recent_contests
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
   recent_contests:
     build: .
     ports:
       - "8001:8000"
     environment:
       PYTHONPATH: "/work"
+      DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres/recent_contests"
     volumes:
-      - db:/work/db
-      - logs:/work/logs
-    command: uvicorn --host 0.0.0.0 main:app
+      - ./logs:/work/logs
+    command: ./wait-for-it.sh postgres:5432 -t 120 -- uvicorn --host 0.0.0.0 main:app
 
   spider:
     build: .
     environment:
       PYTHONPATH: "/work"
+      DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres/recent_contests"
     volumes:
-      - db:/work/db
-      - logs:/work/logs
+      - ./logs:/work/logs
     command: cron -f
 
 volumes:

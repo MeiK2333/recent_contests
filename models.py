@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from typing import List
 
 from sqlalchemy import Column, Integer, DateTime, String, ForeignKey
 from sqlalchemy.orm import relationship, Session
@@ -41,6 +42,7 @@ class Platform(Base):
         TZDateTime, default=datetime(1970, 1, 1, 0, 0, 0, 0, tzinfo=timezone.utc)
     )
 
+    contests: List['Contest']
     contests = relationship("Contest", back_populates="platform")
 
 
@@ -51,10 +53,13 @@ class Contest(Base):
     contest_id = Column(String(256), unique=True)
     name = Column(String(256))
     link = Column(String(256))
+    start_time: datetime
     start_time = Column(TZDateTime)
+    end_time: datetime
     end_time = Column(TZDateTime)
 
     platform_id = Column(Integer, ForeignKey("platforms.id"))
+    platform: Platform
     platform = relationship("Platform", back_populates="contests")
 
 

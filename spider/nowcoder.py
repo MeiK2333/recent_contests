@@ -8,15 +8,22 @@ from bs4 import BeautifulSoup
 from schemas import Contest
 from spider.utils import update_platform
 
-
-def main():
-    resp = requests.get("https://ac.nowcoder.com/acm/contest/vip-index")
+def get_divs(url: str):
+    resp = requests.get(url)
     soup = BeautifulSoup(resp.text, "html.parser")
     divs = (
         soup.find(class_="nk-main")
-        .find(class_="platform-mod")
-        .find_all(class_="platform-item")
+            .find(class_="platform-mod")
+            .find_all(class_="platform-item")
     )
+    return divs
+
+def main():
+    divs = []
+    # 牛客系列赛
+    divs += get_divs("https://ac.nowcoder.com/acm/contest/vip-index?topCategoryFilter=13")
+    # 高校校赛
+    divs += get_divs("https://ac.nowcoder.com/acm/contest/vip-index?topCategoryFilter=14")
 
     data = []
 

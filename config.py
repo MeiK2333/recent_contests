@@ -1,6 +1,6 @@
 import os
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://postgres:postgres@localhost/recent_contests")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./db/db.sqlite3")
 platforms = [
     {"source": "51nod", "link": "https://www.51nod.com/"},
     {"source": "AtCoder", "link": "https://atcoder.jp/"},

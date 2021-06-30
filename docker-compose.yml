@@ -27,7 +27,7 @@ services:
       DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres/recent_contests"
     volumes:
       - ./logs:/work/logs
-    command: cron -f
+    command: cron -L15 -f
 
 volumes:
   db:

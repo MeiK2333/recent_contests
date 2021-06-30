@@ -1,2 +1,2 @@
 # Contests Spider
-00 *    * * *   /bin/sh /work/spider.sh
+0 * * * * /bin/sh /work/spider.sh

@@ -1,15 +1,15 @@
 DATABASE_URL=postgresql+psycopg2://postgres:postgres@postgres/recent_contests
 PYTHONPATH=/work
-* * * * * /usr/local/bin/python /work/spider/51nod.py         >> /work/logs/51nod.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/atcoder.py       >> /work/logs/atcoder.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/codeforces.py    >> /work/logs/codeforces.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/hihocoder.py     >> /work/logs/hihocoder.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/kattis.py        >> /work/logs/kattis.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/leetcode.py      >> /work/logs/leetcode.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/luogu.py         >> /work/logs/luogu.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/codechef.py      >> /work/logs/codechef.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/csacademy.py     >> /work/logs/csacademy.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/jisuanke.py      >> /work/logs/jisuanke.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/leetcode-cn.py   >> /work/logs/leetcode-cn.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/libreoj.py       >> /work/logs/libreoj.log 2>&1
-* * * * * /usr/local/bin/python /work/spider/nowcoder.py      >> /work/logs/nowcoder.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/51nod.py         >> /work/logs/51nod.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/atcoder.py       >> /work/logs/atcoder.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/codeforces.py    >> /work/logs/codeforces.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/hihocoder.py     >> /work/logs/hihocoder.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/kattis.py        >> /work/logs/kattis.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/leetcode.py      >> /work/logs/leetcode.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/luogu.py         >> /work/logs/luogu.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/codechef.py      >> /work/logs/codechef.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/csacademy.py     >> /work/logs/csacademy.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/jisuanke.py      >> /work/logs/jisuanke.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/leetcode-cn.py   >> /work/logs/leetcode-cn.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/libreoj.py       >> /work/logs/libreoj.log 2>&1
+0 * * * * /usr/local/bin/python /work/spider/nowcoder.py      >> /work/logs/nowcoder.log 2>&1

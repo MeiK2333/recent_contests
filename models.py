@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from typing import List
 
-from sqlalchemy import Column, Integer, String, ForeignKey, TIMESTAMP
+from sqlalchemy import Column, Integer, String, ForeignKey, BigInteger
 from sqlalchemy.orm import relationship, Session
 from sqlalchemy.types import TypeDecorator
 
@@ -13,7 +13,7 @@ logger = module_logger("models")
 
 
 class TZDateTime(TypeDecorator):
-    impl = TIMESTAMP()
+    impl = BigInteger()
     cache_ok = True
 
     def process_bind_param(self, value: datetime, dialect):
@@ -22,14 +22,10 @@ class TZDateTime(TypeDecorator):
             raise ValueError("{!r} must be TZ-aware".format(value))
         # 转换为 utc 时间存储
         date = value.astimezone(tz=timezone.utc)
-        return date
+        return int(date.timestamp())
 
-    def process_result_value(self, value: datetime, dialect):
-        # 返回的数据都是 utc+0 保存的，以 iso 格式将其转换为 utc 时间
-        # 精度为 S 即可，因为对于我们的需求，更高的精度也没有意义
-        iso = value.strftime("%Y-%m-%dT%H:%M:%S+00:00")
-        date = datetime.fromisoformat(iso)
-        return date
+    def process_result_value(self, value: int, dialect):
+        return datetime.fromtimestamp(value, tz=timezone.utc)
 
 
 class Platform(Base):

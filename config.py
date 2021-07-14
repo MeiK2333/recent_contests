@@ -1,5 +1,9 @@
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./db/db.sqlite3")
 platforms = [
     {"source": "51nod", "link": "https://www.51nod.com/"},

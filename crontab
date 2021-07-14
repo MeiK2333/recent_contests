@@ -1,4 +1,3 @@
-DATABASE_URL=postgresql+psycopg2://postgres:postgres@postgres/recent_contests
 PYTHONPATH=/work
 0 * * * * /usr/local/bin/python /work/spider/51nod.py         >> /work/logs/51nod.log 2>&1
 0 * * * * /usr/local/bin/python /work/spider/atcoder.py       >> /work/logs/atcoder.log 2>&1

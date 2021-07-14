@@ -15,7 +15,6 @@ services:
       - "8001:8000"
     environment:
       PYTHONPATH: "/work"
-      DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres/recent_contests"
     volumes:
       - ./logs:/work/logs
     command: ./wait-for-it.sh postgres:5432 -t 120 -- uvicorn --host 0.0.0.0 main:app
@@ -24,7 +23,6 @@ services:
     build: .
     environment:
       PYTHONPATH: "/work"
-      DATABASE_URL: "postgresql+psycopg2://postgres:postgres@postgres/recent_contests"
     volumes:
       - ./logs:/work/logs
     command: cron -L15 -f

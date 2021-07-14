@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 from typing import List
 
-from sqlalchemy import Column, Integer, DateTime, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, TIMESTAMP
 from sqlalchemy.orm import relationship, Session
 from sqlalchemy.types import TypeDecorator
 
@@ -13,7 +13,7 @@ logger = module_logger("models")
 
 
 class TZDateTime(TypeDecorator):
-    impl = DateTime()
+    impl = TIMESTAMP()
     cache_ok = True
 
     def process_bind_param(self, value: datetime, dialect):

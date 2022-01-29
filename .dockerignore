@@ -1,5 +1,0 @@
-.dockerignore
-.vscode
-venv
-.gitignore
-db.sqlite3
